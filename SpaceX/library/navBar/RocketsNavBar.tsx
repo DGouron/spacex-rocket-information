@@ -1,4 +1,4 @@
-import { Rocket } from "../../types/spacextype";
+import { Rocket } from "../types/spacextype";
 import RocketLink from "./RocketLink";
 import styles from "./RocketsNavBar.module.css";
 

@@ -26,3 +26,10 @@ export type Launch = {
     site_name_long: string;
   };
 };
+
+export enum RocketThumbnail {
+  falcon1 = "/img/falcon1Thumbnail.jpg",
+  falcon9 = "/img/falcon9Thumbnail.jpg",
+  falconheavy = "/img/falconheavyThumbnail.jpg",
+  starship = "/img/starshipThumbnail.jpg",
+}

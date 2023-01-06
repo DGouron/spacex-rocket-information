@@ -1,16 +1,33 @@
 "use client";
 
-import { Rocket } from "../../types/spacextype";
+import Image from "next/image";
+import { Rocket, RocketThumbnail } from "../types/spacextype";
 import styles from "./RocketView.module.css";
 
 function RocketView(props: { rocket: Rocket }) {
+  function getRocketThumbnailUrl(rocketId: string) {
+    const thumbnail = RocketThumbnail[rocketId as keyof typeof RocketThumbnail];
+    if (thumbnail) {
+      return thumbnail;
+    }
+  }
+
   return (
     <section className={styles.rocketview__container}>
       <h2>{props.rocket.name}</h2>
       <div className={styles.rocketview__content}>
-        <h3 className={styles.rocketview__description}>
-          {props.rocket.description}
-        </h3>
+        <div className={styles.rocketview__description}>
+          <h3>{props.rocket.description}</h3>
+          <Image
+            src={
+              getRocketThumbnailUrl(props.rocket.id) || RocketThumbnail.falcon1
+            }
+            width={500}
+            height={120}
+            alt={props.rocket.name}
+            className={styles.rocketview__thumbnail}
+          />
+        </div>
         <aside className={styles.rocketview__details}>
           <p>Country : {props.rocket.country}</p>
           <p>Company : {props.rocket.company}</p>
