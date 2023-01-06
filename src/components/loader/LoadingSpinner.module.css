@@ -1,9 +1,17 @@
+.loading__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #3333;
+}
 .loading__spinner {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 24px;
-  height: 24px;
+  width: 96px;
+  height: 96px;
   border: 10px solid white; /* Light grey */
   border-top: 4px solid #383636; /* Black */
   border-bottom: 4px solid #383636; /* Black */
@@ -13,18 +21,18 @@
 @keyframes spin {
   0% {
     transform: rotate(0deg) scale(1);
-    width: 24px;
-    height: 24px;
+    width: 96px;
+    height: 96px;
   }
   50% {
     transform: rotate(180deg) scale(1.2);
-    width: 10px;
-    height: 10px;
+    width: 40px;
+    height: 40px;
     border: 5px solid white; /* Light grey */
   }
   100% {
     transform: rotate(360deg) scale(1);
-    width: 24px;
-    height: 24px;
+    width: 96px;
+    height: 96px;
   }
 }
