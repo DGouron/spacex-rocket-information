@@ -1,0 +1,30 @@
+.loading__spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 10px solid white; /* Light grey */
+  border-top: 4px solid #383636; /* Black */
+  border-bottom: 4px solid #383636; /* Black */
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+    width: 24px;
+    height: 24px;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+    width: 10px;
+    height: 10px;
+    border: 5px solid white; /* Light grey */
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    width: 24px;
+    height: 24px;
+  }
+}
