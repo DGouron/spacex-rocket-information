@@ -22,6 +22,7 @@ async function Page(props: props) {
   return (
     <div>
       <RocketView rocket={rocketData} />
+      {/* @ts-expect-error Server Component */}
       <LaunchView launches={launchData} />
     </div>
   );

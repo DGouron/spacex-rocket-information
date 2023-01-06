@@ -17,6 +17,7 @@ export default function RootLayout({
       <body>
         <Header />
         <main>
+          {/* @ts-expect-error Server Component */}
           <RocketsNavBar />
           {children}
         </main>
