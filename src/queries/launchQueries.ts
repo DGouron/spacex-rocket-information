@@ -6,8 +6,17 @@ export const getLaunchesById = async (id: string) => {
   query GetLaunchesByRocketId($find: LaunchFind!) 
   {
     launches(find: $find){
-      id
-      mission_name
+    id
+    mission_name
+    details
+    launch_year
+    links {
+      flickr_images
+      wikipedia
+    }
+    launch_site {
+      site_name_long
+    }
     }
   }
 `;
@@ -21,7 +30,6 @@ export const getLaunchesById = async (id: string) => {
       body: JSON.stringify({ query, variables }),
     });
     const { data } = await dataReceived.json();
-    console.log("dataReceived", data);
     return data.launches as Launch[];
   } catch (error) {
     console.log("error custom", error);

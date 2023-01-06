@@ -15,6 +15,14 @@ export type Rocket = {
   boosters: number;
 };
 export type Launch = {
+  id: string;
   details: string;
   mission_name: string;
+  launch_year: string;
+  links: {
+    wikipedia: string;
+  };
+  launch_site: {
+    site_name_long: string;
+  };
 };
