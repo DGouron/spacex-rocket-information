@@ -24,7 +24,7 @@
 .nav__container ul {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 5px;
   flex: 1 1 100%;
   align-items: flex-start;
   padding: 5px;
@@ -32,4 +32,16 @@
 .nav__container li {
   list-style: none;
   padding: 0.5rem;
+  background-image: url("/Spacex_rocket.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--block-border-radius);
+  width: 300px;
+  height: 96px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.nav__container li:hover {
+  filter: drop-shadow(0 0 0.75rem #f00);
 }
