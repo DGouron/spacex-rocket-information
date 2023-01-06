@@ -2,24 +2,38 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  margin-top: 1rem;
   background-color: var(--block-background-color);
   border-radius: var(--block-border-radius);
   color: var(--primary-color);
   font-size: 1.5rem;
   font-weight: 500;
+  font-family: var(--primary-font);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+  margin-top: 1rem;
 }
-.nav__container a {
+.rocketnav__link {
   color: #fff;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 500;
   font-family: var(--primary-font);
+  letter-spacing: 0.1rem;
+  padding: 0.5rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease-in-out;
+  background-image: url("/Spacex_rocket.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: var(--block-border-radius);
+  width: 300px;
+  height: 96px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.nav__container a:hover {
+.rocketnav__link:hover {
   color: #f00;
-  filter: drop-shadow(0 0 0.75rem #f00);
+  filter: drop-shadow(0 0 0.75rem #3333);
 }
 .nav__container ul {
   display: flex;
@@ -28,20 +42,4 @@
   flex: 1 1 100%;
   align-items: flex-start;
   padding: 5px;
-}
-.nav__container li {
-  list-style: none;
-  padding: 0.5rem;
-  background-image: url("/Spacex_rocket.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: var(--block-border-radius);
-  width: 300px;
-  height: 96px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-.nav__container li:hover {
-  filter: drop-shadow(0 0 0.75rem #f00);
 }

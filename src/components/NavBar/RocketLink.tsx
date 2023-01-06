@@ -1,12 +1,15 @@
 import Link from "next/link";
 import { Rocket } from "../../types/spacextype";
+import styles from "./RocketsNavBar.module.css";
 
 export default function RocketsNavBar({ rocket }: { rocket: Rocket }) {
   return (
-    <li>
-      <Link href={`/rocket/${rocket.id}`} key={rocket.id}>
-        {rocket.name}
-      </Link>
-    </li>
+    <Link
+      href={`/rocket/${rocket.id}`}
+      key={rocket.id}
+      className={styles.rocketnav__link}
+    >
+      {rocket.name}
+    </Link>
   );
 }
