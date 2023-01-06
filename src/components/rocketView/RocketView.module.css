@@ -1,0 +1,57 @@
+.rocketview__container {
+  margin-bottom: 20px;
+}
+.rocketview__description {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #3333;
+}
+.rocketview__content {
+  display: flex;
+  flex-direction: column;
+}
+.rocketview__details {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #3333;
+}
+.rocketView__wikilink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #000;
+  transition: all 0.2s ease-in-out;
+}
+.rocketView__wikilink:hover {
+  background-color: #333;
+  filter: drop-shadow(0 0 0.75rem #333);
+}
+
+/*Mobile first*/
+@media (min-width: 768px) {
+  .rocketview__content {
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-between;
+  }
+  .rocketview__description {
+    width: 70%;
+    height: 100%;
+  }
+  .rocketview__details {
+    width: 50%;
+  }
+}
