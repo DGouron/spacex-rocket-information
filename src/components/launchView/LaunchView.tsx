@@ -9,7 +9,7 @@ function LaunchView(props: { launches: Launch[] }) {
     <section className={styles.launch__container}>
       <h2>Launches</h2>
       {props.launches.map((launch) => {
-        return <LaunchRow launch={launch} key={launch.id} />;
+        return <LaunchRow launch={launch} key={launch.mission_name} />;
       })}
     </section>
   );
