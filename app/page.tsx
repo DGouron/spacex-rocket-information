@@ -6,12 +6,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <h2 className={styles.title}>
-          No rocket selected. Please select a rocket from the navigation bar.
-        </h2>
-      </div>
-    </main>
+    <section className={styles.container}>
+      <h2 className={styles.message}>
+        No rocket selected. Please select a rocket from the navigation bar.
+      </h2>
+    </section>
   );
 }

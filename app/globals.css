@@ -1,7 +1,44 @@
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --background-color: #001825;
+  --block-background-color: #023855;
+
+  --primary-text-color: #fff;
+
+  --primary-font: "Roboto", sans-serif;
+  --secondary-font: "Montserrat", sans-serif;
+
+  --block-border-radius: 5px;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  background: var(--background-color);
+  color: var(--primary-text-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  padding: 0.5rem;
+  background-color: var(--block-background-color);
+  border-radius: var(--block-border-radius);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--primary-font);
+  letter-spacing: 0.1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* mobile first */
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+    gap: 40px;
+  }
 }
