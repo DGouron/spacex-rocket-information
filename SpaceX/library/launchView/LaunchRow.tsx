@@ -1,6 +1,6 @@
 "use client";
 
-import { Launch } from "../../types/spacextype";
+import { Launch } from "../types/spacextype";
 import styles from "./Launch.module.css";
 
 function LaunchRow(props: { launch: Launch }) {

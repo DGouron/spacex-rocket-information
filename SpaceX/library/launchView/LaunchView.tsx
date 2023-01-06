@@ -1,6 +1,6 @@
 "use client";
 
-import { Launch } from "../../types/spacextype";
+import { Launch } from "../types/spacextype";
 import LaunchRow from "./LaunchRow";
 import styles from "./Launch.module.css";
 
