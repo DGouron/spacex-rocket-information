@@ -1,5 +1,5 @@
+import RocketsNavBar from "../SpaceX/library/navBar/RocketsNavBar";
 import Header from "../src/components/Header";
-import RocketsNavBar from "../src/components/navBar/RocketsNavBar";
 import "./globals.css";
 
 export default function RootLayout({

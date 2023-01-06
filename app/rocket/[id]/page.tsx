@@ -1,8 +1,7 @@
-import LaunchView from "../../../src/components/launchView/LaunchView";
-import RocketView from "../../../src/components/rocketView/RocketView";
-import { getLaunchesById } from "../../../src/queries/launchQueries";
-import { getRocketById } from "../../../src/queries/rocketQueries";
-import { Rocket } from "../../../src/types/spacextype";
+import LaunchView from "../../../SpaceX/library/launchView/LaunchView";
+import { getLaunchesById } from "../../../SpaceX/library/queries/launchQueries";
+import { getRocketById } from "../../../SpaceX/library/queries/rocketQueries";
+import RocketView from "../../../SpaceX/library/rocketView/RocketView";
 
 type props = {
   params: {
