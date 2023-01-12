@@ -1,6 +1,8 @@
+import { Suspense } from "react";
 import RocketsNavBar from "../SpaceX/library/navBar/RocketsNavBar";
 import Header from "../src/components/Header";
 import "./globals.css";
+import Loading from "./rocket/[id]/loading";
 
 export default function RootLayout({
   children,
@@ -19,7 +21,9 @@ export default function RootLayout({
         <main>
           {/* @ts-expect-error Server Component */}
           <RocketsNavBar />
-          {children}
+          <Suspense fallback={<Loading />}>
+            {children}
+          </Suspense>
         </main>
       </body>
     </html>
