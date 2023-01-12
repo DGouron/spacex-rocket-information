@@ -1,7 +1,9 @@
+import { Suspense } from "react";
 import LaunchView from "../../../SpaceX/library/launchView/LaunchView";
 import { getLaunchesById } from "../../../SpaceX/library/queries/launchQueries";
 import { getRocketById } from "../../../SpaceX/library/queries/rocketQueries";
 import RocketView from "../../../SpaceX/library/rocketView/RocketView";
+import Loading from "./loading";
 
 type props = {
   params: {
@@ -20,7 +22,9 @@ async function Page(props: props) {
 
   return (
     <div>
-      <RocketView rocket={rocketData} />
+      <Suspense fallback={<Loading />}>
+        <RocketView rocket={rocketData} />
+      </Suspense>
       {/* @ts-expect-error Server Component */}
       <LaunchView launches={launchData} />
     </div>
