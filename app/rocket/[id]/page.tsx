@@ -24,6 +24,8 @@ async function Page(props: props) {
     <div>
       <Suspense fallback={<Loading />}>
         <RocketView rocket={rocketData} />
+      </Suspense>
+      <Suspense fallback={<p>Loading launches...</p>}>
         {/* @ts-expect-error Server Component */}
         <LaunchView launches={launchData} />
       </Suspense>
