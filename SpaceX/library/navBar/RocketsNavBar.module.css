@@ -38,8 +38,14 @@
 .nav__container ul {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   flex: 1 1 100%;
-  align-items: flex-start;
+  align-items: center;
   padding: 5px;
+}
+/*Mobile first*/
+@media (min-width: 768px) {
+  .nav__container ul{
+    align-items: flex-start;
+  }
 }

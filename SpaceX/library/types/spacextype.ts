@@ -28,8 +28,8 @@ export type Launch = {
 };
 
 export enum RocketThumbnail {
-  falcon1 = "/img/falcon1Thumbnail.jpg",
-  falcon9 = "/img/falcon9Thumbnail.jpg",
-  falconheavy = "/img/falconheavyThumbnail.jpg",
-  starship = "/img/starshipThumbnail.jpg",
+  falcon1 = "/img/falcon1Thumbnail.webp",
+  falcon9 = "/img/falcon9Thumbnail.webp",
+  falconheavy = "/img/falconheavyThumbnail.webp",
+  starship = "/img/starshipThumbnail.webp",
 }
